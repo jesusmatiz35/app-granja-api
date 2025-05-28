@@ -7,14 +7,14 @@ services:
     environment:
       PORT: 8080
       DATABASE_USERNAME: root
-      DATABASE_PASSWORD: 4dM1N.2025**
+      DATABASE_PASSWORD: 4dM1N.2024**
       DATABASE_NAME: granjadb
-      HOST_DATABASE: 154.12.252.107
+      HOST_DATABASE: localhost
       PORT_DATABASE: 3806
-      WOMPI_PLUBIC_KEY: "pub_prod_35Z7wYnS4FaGTtwDr1L0x3MrDC8fH4ZV"
-      WOMPI_PRIVATE_KEY: "prv_prod_Hs8DZ0UKxvBmnCp6XcovQP5ekSGC0ruy"
-      WOMPI_EVENT_SECRET: "prod_events_0d61ebEGIH8lgqKiq5Suc5xALraU0d1w"
-      WOMPI_INTEGRITY_SECRET: "prod_integrity_5jYgvg7lVPmQjlyuz3gNCatcLg1NuwFe"
+      WOMPI_PLUBIC_KEY: "public_key"
+      WOMPI_PRIVATE_KEY: "private_key"
+      WOMPI_EVENT_SECRET: "prod_events"
+      WOMPI_INTEGRITY_SECRET: "prod_integrity"
       WOMPI_RETRIES: 5
     ports:
       - 8080:8080
