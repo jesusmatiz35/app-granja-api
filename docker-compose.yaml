@@ -1,0 +1,30 @@
+services:
+  appgranjapi:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      PORT: 8080
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: 4dM1N.2025**
+      DATABASE_NAME: granjadb
+      HOST_DATABASE: 154.12.252.107
+      PORT_DATABASE: 3806
+      WOMPI_PLUBIC_KEY: "pub_prod_35Z7wYnS4FaGTtwDr1L0x3MrDC8fH4ZV"
+      WOMPI_PRIVATE_KEY: "prv_prod_Hs8DZ0UKxvBmnCp6XcovQP5ekSGC0ruy"
+      WOMPI_EVENT_SECRET: "prod_events_0d61ebEGIH8lgqKiq5Suc5xALraU0d1w"
+      WOMPI_INTEGRITY_SECRET: "prod_integrity_5jYgvg7lVPmQjlyuz3gNCatcLg1NuwFe"
+      WOMPI_RETRIES: 5
+    ports:
+      - 8080:8080
+    networks:
+      bot_net:
+        aliases:
+          - backend_granja_api
+networks:
+  bot_net:
+    name: bot_network
+    driver: bridge
+    ipam:
+      driver: default
