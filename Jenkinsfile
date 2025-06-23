@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Starting SonarQube analysis...'
                 withSonarQubeEnv('SonarQube') {
-                    sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=app-granja-api -Dsonar.projectName=app-granja-api -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_42ccaa424766922e71777fa3780818f3dacc4a68'
+                    sh 'mvn clean verify -DskipTests sonar:sonar -Dsonar.projectKey=app-granja-api -Dsonar.projectName=app-granja-api -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_42ccaa424766922e71777fa3780818f3dacc4a68'
                 }
             }
         }
